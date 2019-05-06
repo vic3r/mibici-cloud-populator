@@ -11,8 +11,8 @@ class BikeStation {
     this.capacity = `${info.capacity}`;
     this.bikes_available = `${status.num_bikes_available}`;
     this.bikes_unavailable = `${status.num_bikes_disabled}`;
-    this.dock_available = `${status.num_docks_available}`;
-    this.dock_unavailable = `${status.num_docks_disabled}`;
+    this.docks_available = `${status.num_docks_available}`;
+    this.docks_unavailable = `${status.num_docks_disabled}`;
   }
 
   loadZone (info) {
