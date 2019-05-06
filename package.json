@@ -1,0 +1,32 @@
+{
+  "name": "mibici-cloud-populator",
+  "version": "1.0.0",
+  "main": "src/handler.js",
+  "repository": "https://github.com/vic3r/mibici-cloud-populator.git",
+  "author": "vic3r <victor.g64r@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "NODE_ENV=production node src/app.js",
+    "start-dev": "NODE_ENV=development nodemon src/app.js",
+    "lint": "NODE_ENV=test ./node_modules/.bin/eslint .",
+    "lint-fix": "NODE_ENV=test ./node_modules/.bin/eslint --fix .",
+    "debug": "NODE_ENV=development nodemon --inspect-brk src/app.js",
+    "test": "NODE_ENV=test ./node_modules/.bin/mocha test --recursive"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "body-parser": "^1.19.0",
+    "config": "^3.1.0",
+    "dotenv": "6.2.0",
+    "express": "^4.16.4",
+    "redis": "^2.8.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-standard": "^3.0.1",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-promise": "^4.1.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "nodemon": "^1.19.0"
+  }
+}
