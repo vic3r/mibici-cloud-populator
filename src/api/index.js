@@ -16,6 +16,10 @@ function start () {
     if (stationsUpdated === undefined) {
       res.status(500).send('No data found');
     }
+    
+    client.flushdb((err, succeeded) => {
+      console.log(succeeded);
+    });
 
     stationsUpdated.forEach((station) => {
       client.lpush(station.zone, JSON.stringify(station));
